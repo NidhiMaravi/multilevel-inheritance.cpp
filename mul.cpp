@@ -1,4 +1,3 @@
-
 #include<iostream.h>
 #include<stdio.h>
 
@@ -29,6 +28,7 @@ float a,b,c;
 public :
 void read_sub()
 {
+read_add();
 cout<<"For Subtraction "<<endl;
 cout<<"Enter the value of a :";
 cin>>a;
@@ -39,6 +39,7 @@ c =a-b;
 
 void show_sub()
 {
+show_sub();
 cout<<"The value of c is "<<c<<endl;
 }
 };
@@ -50,6 +51,7 @@ float a,b,c;
 public :
 void read_mul()
 {
+read_sub();
 cout<<"For Multipication";
 cout<<"Enter the value of a :";
 cin>>a;
@@ -59,21 +61,18 @@ c =a*b;
 }
 
 void show_mul()
-{
+{show_sub();
 cout<<"The value of c is "<<c<<endl;
 }
 };
 
 
-class div : public add,public sub,public mul
+class div : public mul
 {
 float a,b,c;
 public :
 void read_div()
-{
-read_add();
-read_sub();
-read_mul();
+{read_mul();
 cout<<"For Division";
 cout<<"Enter the value of a :";
 cin>>a;
@@ -83,9 +82,7 @@ c =a/b;
 }
 
 void show_div()
-{show_add();
-show_sub();
-show_mul();
+{show_mul();
 cout<<"The value of c is "<<c<<endl;
 }
 }d;
@@ -98,4 +95,3 @@ cout<<"Show the result "<<endl;
 d.show_div();
 getch();
 }
-
